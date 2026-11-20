@@ -1,0 +1,20 @@
+{
+  "_note": "Structured failure evidence fed to the coding agent after evaluation run-1. Only the findings array was given — not the full result. The agent was instructed to fix the root cause without changing any other case.",
+  "instruction": "The evaluation harness rejected 2 cases. Here are the structured findings. Fix only the cases listed. Do not change any other cases. Do not modify evals/dataset.json or any harness files.",
+  "findings": [
+    {
+      "code": "INVALID_QUALITY_SCORE",
+      "caseId": "BAD-004",
+      "message": "quality_score 150 is not in [0, 100] (INV-004). Root cause: empty commit message should score 0, not 150.",
+      "field": "quality_score",
+      "requirement": "INV-004"
+    },
+    {
+      "code": "INVALID_TYPE",
+      "caseId": "BAD-007",
+      "message": "type 'FIX' not in allowed set (INV-003). Root cause: uppercase type should not be passed through — the analyzer must set type=null when no valid lowercase type is detected.",
+      "field": "type",
+      "requirement": "INV-003"
+    }
+  ]
+}

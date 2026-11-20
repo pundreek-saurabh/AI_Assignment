@@ -1,0 +1,89 @@
+{
+  "target": "src/password-checker.js",
+  "runNumber": 1,
+  "checkedAt": "2026-11-13T08:15:32.000Z",
+  "completedAt": "2026-11-13T08:15:35.000Z",
+  "staticPassed": false,
+  "dynamicPassed": false,
+  "passed": false,
+  "gates": {
+    "lint": {
+      "gate": "lint",
+      "passed": false,
+      "findings": [
+        {
+          "code": "strict",
+          "message": "Use the global form of 'use strict'.",
+          "file": "src/password-checker.js",
+          "line": 1,
+          "gate": "lint",
+          "requirement": "CON-004"
+        },
+        {
+          "code": "no-var",
+          "message": "Unexpected var, use let or const instead.",
+          "file": "src/password-checker.js",
+          "line": 10,
+          "gate": "lint",
+          "requirement": "CON-003"
+        },
+        {
+          "code": "no-var",
+          "message": "Unexpected var, use let or const instead.",
+          "file": "src/password-checker.js",
+          "line": 12,
+          "gate": "lint",
+          "requirement": "CON-003"
+        }
+      ]
+    },
+    "security": {
+      "gate": "security",
+      "passed": false,
+      "findings": [],
+      "note": "Security gate not run — lint gate must pass first"
+    },
+    "tests": {
+      "gate": "tests",
+      "passed": false,
+      "findings": [
+        {
+          "code": "SKIPPED",
+          "message": "Dynamic tests skipped until static findings are resolved."
+        }
+      ],
+      "stdout": "",
+      "stderr": "Skipped."
+    }
+  },
+  "allFindings": [
+    {
+      "code": "strict",
+      "message": "Use the global form of 'use strict'.",
+      "file": "src/password-checker.js",
+      "line": 1,
+      "gate": "lint",
+      "requirement": "CON-004"
+    },
+    {
+      "code": "no-var",
+      "message": "Unexpected var, use let or const instead.",
+      "file": "src/password-checker.js",
+      "line": 10,
+      "gate": "lint",
+      "requirement": "CON-003"
+    },
+    {
+      "code": "no-var",
+      "message": "Unexpected var, use let or const instead.",
+      "file": "src/password-checker.js",
+      "line": 12,
+      "gate": "lint",
+      "requirement": "CON-003"
+    },
+    {
+      "code": "SKIPPED",
+      "message": "Dynamic tests skipped until static findings are resolved."
+    }
+  ]
+}

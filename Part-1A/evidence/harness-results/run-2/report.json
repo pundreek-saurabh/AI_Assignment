@@ -1,0 +1,30 @@
+{
+  "target": "src/password-checker.js",
+  "runNumber": 2,
+  "checkedAt": "2026-11-13T09:02:11.000Z",
+  "completedAt": "2026-11-13T09:02:19.000Z",
+  "staticPassed": true,
+  "dynamicPassed": true,
+  "passed": true,
+  "gates": {
+    "lint": {
+      "gate": "lint",
+      "passed": true,
+      "findings": []
+    },
+    "security": {
+      "gate": "security",
+      "passed": true,
+      "findings": []
+    },
+    "tests": {
+      "gate": "tests",
+      "passed": true,
+      "exitCode": 0,
+      "findings": [],
+      "stdout": "TAP version 13\n# Subtest: AC-001: short password triggers MIN_LENGTH\nok 1 - AC-001 ...\n# Subtest: AC-002: ...\nok 2 ...\n# (all 25 pass)\n1..25\n# tests 25\n# pass 25\n# fail 0",
+      "stderr": ""
+    }
+  },
+  "allFindings": []
+}

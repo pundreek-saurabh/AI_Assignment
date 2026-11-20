@@ -1,0 +1,14 @@
+{
+  "name": "part-1b-commit-analyzer",
+  "version": "1.0.0",
+  "description": "Commit Message Quality Analyzer — Part 1B, SEZG534 Assignment 1",
+  "main": "src/commit-analyzer.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "test": "node --test tests/",
+    "evaluate": "node .harness/run-evaluation.js",
+    "self-check": "node .harness/self-check.js"
+  }
+}

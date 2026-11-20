@@ -1,0 +1,41 @@
+{
+  "target": "src/password-checker.js",
+  "runNumber": 3,
+  "checkedAt": "2026-11-20T15:43:52.466Z",
+  "completedAt": "2026-11-20T15:43:52.815Z",
+  "staticPassed": false,
+  "dynamicPassed": false,
+  "passed": false,
+  "gates": {
+    "lint": {
+      "gate": "lint",
+      "passed": false,
+      "findings": [],
+      "stderr": "C:\\Users\\pundr\\Documents\\AI_SDLC\\Assignment-1\\Part-1A\\node_modules\\.bin\\eslint:2\r\nbasedir=$(dirname \"$(echo \"$0\" | sed -e 's,\\\\,/,g')\")\r\n          ^^^^^^^\r\n\r\nSyntaxError: missing ) after argument list\r\n    at wrapSafe (node:internal/modules/cjs/loader:1900:18)\r\n    at Module._compile (node:internal/modules/cjs/loader:1942:20)\r\n    at Object..js (node:internal/modules/cjs/loader:2108:10)\r\n    at Module.load (node:internal/modules/cjs/loader:1690:32)\r\n    at Module._load (node:internal/modules/cjs/loader:1480:12)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\r\n    at node:internal/main/run_main_module:33:47\r\n\r\nNode.js v26.13.1\r\n"
+    },
+    "security": {
+      "gate": "security",
+      "passed": false,
+      "findings": [],
+      "stderr": "C:\\Users\\pundr\\Documents\\AI_SDLC\\Assignment-1\\Part-1A\\node_modules\\.bin\\eslint:2\r\nbasedir=$(dirname \"$(echo \"$0\" | sed -e 's,\\\\,/,g')\")\r\n          ^^^^^^^\r\n\r\nSyntaxError: missing ) after argument list\r\n    at wrapSafe (node:internal/modules/cjs/loader:1900:18)\r\n    at Module._compile (node:internal/modules/cjs/loader:1942:20)\r\n    at Object..js (node:internal/modules/cjs/loader:2108:10)\r\n    at Module.load (node:internal/modules/cjs/loader:1690:32)\r\n    at Module._load (node:internal/modules/cjs/loader:1480:12)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\r\n    at node:internal/main/run_main_module:33:47\r\n\r\nNode.js v26.13.1\r\n"
+    },
+    "tests": {
+      "gate": "tests",
+      "passed": false,
+      "findings": [
+        {
+          "code": "SKIPPED",
+          "message": "Dynamic tests skipped until static findings are resolved."
+        }
+      ],
+      "stdout": "",
+      "stderr": "Skipped."
+    }
+  },
+  "allFindings": [
+    {
+      "code": "SKIPPED",
+      "message": "Dynamic tests skipped until static findings are resolved."
+    }
+  ]
+}

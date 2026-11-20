@@ -1,0 +1,14 @@
+{
+  "env": {
+    "node": true,
+    "es2022": true
+  },
+  "plugins": ["security"],
+  "extends": ["plugin:security/recommended-legacy"],
+  "rules": {
+    "security/detect-eval-with-expression": "error",
+    "security/detect-non-literal-regexp": "warn",
+    "security/detect-object-injection": "warn",
+    "security/detect-possible-timing-attacks": "warn"
+  }
+}

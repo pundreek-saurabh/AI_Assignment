@@ -1,0 +1,20 @@
+{
+  "name": "part-1a-password-checker",
+  "version": "1.0.0",
+  "description": "Password Policy Checker — Part 1A, SEZG534 Assignment 1",
+  "main": "src/password-checker.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "test": "node --test tests/",
+    "lint": "eslint src/ tests/ --config .eslintrc.lint.json --max-warnings 0",
+    "security": "eslint src/ --config .eslintrc.security.json --max-warnings 0",
+    "harness": "node .harness/run-harness.js",
+    "self-check": "node .harness/self-check.js"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-plugin-security": "^2.1.0"
+  }
+}

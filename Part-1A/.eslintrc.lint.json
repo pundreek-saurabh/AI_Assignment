@@ -1,0 +1,19 @@
+{
+  "env": {
+    "node": true,
+    "es2022": true
+  },
+  "rules": {
+    "no-var": "error",
+    "prefer-const": "error",
+    "eqeqeq": ["error", "always"],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "strict": ["error", "global"],
+    "no-console": "off",
+    "semi": ["error", "always"],
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "no-trailing-spaces": "error",
+    "eol-last": ["error", "always"]
+  }
+}
