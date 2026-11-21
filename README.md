@@ -1,8 +1,8 @@
 # Assignment 1 — Spec-Driven Development and Harness Engineering
 
 **Course:** AI-Augmented Software Development Life Cycle (SEZG534), BITS Pilani  
-**Student:** pundreek-saurabh  
-**GitHub:** https://github.com/pundreek-saurabh/Assignment-1-SEZG534
+**Student:** Pundreek Saurabh Srivastava  
+**GitHub:** https://github.com/pundreek-saurabh/AI_Assignment
 
 ---
 
