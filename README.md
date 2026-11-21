@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Assignment 1 — Spec-Driven Development and Harness Engineering
 
 **Course:** AI-Augmented Software Development Life Cycle (SEZG534), BITS Pilani  
@@ -85,3 +86,7 @@ This project was developed with AI assistance (Antigravity / Claude Sonnet 4.6) 
 - No API keys, credentials, or secrets are committed to this repository.
 - Part 1B uses simulation mode: a predefined lookup table returns structured JSON outputs for each eval case, demonstrating the full 3-layer harness architecture without live model calls.
 - Regenerate any API keys used during development after submission.
+=======
+# AI_Assignment
+Assignment 1 : EC1 
+>>>>>>> a44a23395d5631214ad2b943516233567f1eee3a
