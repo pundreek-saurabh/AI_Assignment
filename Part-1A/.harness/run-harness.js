@@ -78,13 +78,16 @@ function parseEslintFindings(stdout, gate) {
 // ---------------------------------------------------------------------------
 // Gates
 // ---------------------------------------------------------------------------
-
+// 'node_modules/.bin/eslint' : false
+// 'node_modules/eslint/bin/eslint.js' : true
+// line 88, 108
 function runLintGate() {
   console.log('\n📐 Gate 1 — Lint (ESLint)');
   const { exitCode, stdout, stderr } = run(
     'node',
-    ['node_modules/.bin/eslint', 'src/', 'tests/', '--config', '.eslintrc.lint.json',
+    ['node_modules/eslint/bin/eslint.js', 'src/', 'tests/', '--config', '.eslintrc.lint.json',
       '--max-warnings', '0', '--format', 'json'],
+    
     ROOT
   );
   const findings = parseEslintFindings(stdout, 'lint');
@@ -102,7 +105,7 @@ function runSecurityGate() {
   console.log('\n🔒 Gate 2 — Security/SAST (eslint-plugin-security)');
   const { exitCode, stdout, stderr } = run(
     'node',
-    ['node_modules/.bin/eslint', 'src/', '--config', '.eslintrc.security.json',
+    ['node_modules/eslint/bin/eslint.js', 'src/', '--config', '.eslintrc.security.json',
       '--max-warnings', '0', '--format', 'json'],
     ROOT
   );

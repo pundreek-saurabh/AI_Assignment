@@ -1,41 +1,32 @@
 {
   "target": "src/password-checker.js",
   "runNumber": 3,
-  "checkedAt": "2026-11-20T15:43:52.466Z",
-  "completedAt": "2026-11-20T15:43:52.815Z",
-  "staticPassed": false,
-  "dynamicPassed": false,
-  "passed": false,
+  "checkedAt": "2026-11-21T12:12:14.427Z",
+  "completedAt": "2026-11-21T12:12:15.985Z",
+  "staticPassed": true,
+  "dynamicPassed": true,
+  "passed": true,
   "gates": {
     "lint": {
       "gate": "lint",
-      "passed": false,
+      "passed": true,
       "findings": [],
-      "stderr": "C:\\Users\\pundr\\Documents\\AI_SDLC\\Assignment-1\\Part-1A\\node_modules\\.bin\\eslint:2\r\nbasedir=$(dirname \"$(echo \"$0\" | sed -e 's,\\\\,/,g')\")\r\n          ^^^^^^^\r\n\r\nSyntaxError: missing ) after argument list\r\n    at wrapSafe (node:internal/modules/cjs/loader:1900:18)\r\n    at Module._compile (node:internal/modules/cjs/loader:1942:20)\r\n    at Object..js (node:internal/modules/cjs/loader:2108:10)\r\n    at Module.load (node:internal/modules/cjs/loader:1690:32)\r\n    at Module._load (node:internal/modules/cjs/loader:1480:12)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\r\n    at node:internal/main/run_main_module:33:47\r\n\r\nNode.js v26.13.1\r\n"
+      "stderr": ""
     },
     "security": {
       "gate": "security",
-      "passed": false,
+      "passed": true,
       "findings": [],
-      "stderr": "C:\\Users\\pundr\\Documents\\AI_SDLC\\Assignment-1\\Part-1A\\node_modules\\.bin\\eslint:2\r\nbasedir=$(dirname \"$(echo \"$0\" | sed -e 's,\\\\,/,g')\")\r\n          ^^^^^^^\r\n\r\nSyntaxError: missing ) after argument list\r\n    at wrapSafe (node:internal/modules/cjs/loader:1900:18)\r\n    at Module._compile (node:internal/modules/cjs/loader:1942:20)\r\n    at Object..js (node:internal/modules/cjs/loader:2108:10)\r\n    at Module.load (node:internal/modules/cjs/loader:1690:32)\r\n    at Module._load (node:internal/modules/cjs/loader:1480:12)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\r\n    at node:internal/main/run_main_module:33:47\r\n\r\nNode.js v26.13.1\r\n"
+      "stderr": ""
     },
     "tests": {
       "gate": "tests",
-      "passed": false,
-      "findings": [
-        {
-          "code": "SKIPPED",
-          "message": "Dynamic tests skipped until static findings are resolved."
-        }
-      ],
-      "stdout": "",
-      "stderr": "Skipped."
+      "passed": true,
+      "exitCode": 0,
+      "stdout": "✔ AC-001: short password triggers MIN_LENGTH with correct required and actual (2.8766ms)\n✔ AC-002: fully compliant password has no violations and isAcceptable true (0.189ms)\n✔ AC-003: all-lowercase password violates MISSING_UPPERCASE when required (0.1743ms)\n✔ AC-004: all-uppercase password violates MISSING_LOWERCASE when required (0.1638ms)\n✔ AC-005: password without digit violates MISSING_DIGIT when required (0.2138ms)\n✔ AC-006: password without special char violates MISSING_SPECIAL when required (0.1488ms)\n✔ AC-007: 10-char mixed-class password has entropy > 50 bits (0.1361ms)\n✔ AC-008: score is always an integer in range [0, 100] (0.2018ms)\n✔ AC-009: short password with no variety gets grade \"weak\" (0.1448ms)\n✔ AC-010: medium-strength password gets grade \"fair\" (0.356ms)\n✔ AC-011: Password1! (10 chars, all classes) gets grade \"strong\" (0.2329ms)\n✔ AC-012: very long mixed-class password gets grade \"very_strong\" (0.1068ms)\n✔ AC-013: any violation causes isAcceptable to be false (0.1996ms)\n✔ AC-014: zero violations means isAcceptable is true (0.8395ms)\n✔ AC-015: empty string gives EMPTY_PASSWORD, score 0, grade weak (0.1351ms)\n✔ AC-016: \"aaabbbccc\" with maxRepeatedChars:2 triggers REPEATED_CHARS (0.176ms)\n✔ AC-017: \"password\" triggers COMMON_PASSWORD with default policy (0.0957ms)\n✔ AC-018: MIN_LENGTH violation for \"Password1!\" against minLength:12 (0.116ms)\n✔ AC-019: adding character classes to a password does not decrease score (0.1305ms)\n✔ AC-020: default policy does not trigger character-class violations (0.1824ms)\n✔ AC-021: requireSpecial false suppresses MISSING_SPECIAL violation (0.0777ms)\n✔ AC-022: entropy_bits is always a non-negative number (0.0839ms)\n✔ AC-023: violations is always an array, never null or undefined (0.0575ms)\n✔ AC-024: returned object has exactly the five required keys (0.6529ms)\n✔ AC-025: 100-char password with all character classes scores 100 (0.0686ms)\nℹ tests 25\nℹ suites 0\nℹ pass 25\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 107.9679\n",
+      "stderr": "",
+      "findings": []
     }
   },
-  "allFindings": [
-    {
-      "code": "SKIPPED",
-      "message": "Dynamic tests skipped until static findings are resolved."
-    }
-  ]
+  "allFindings": []
 }

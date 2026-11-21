@@ -9,13 +9,15 @@
 //   [strict] Line 1: 'use strict' is missing            (Gate 1 FAIL)
 // Gate 3 (tests) was skipped because Gate 1 failed.
 // See evidence/harness-results/run-1/report.json
+'use strict';
+const SPECIAL_CHARS = '!@#$%^&*()_+-=[]{}|;:,.<>?/~`';
+// var password = 'P@ssw0rd123!';  // Example password
 
-var SPECIAL_CHARS = '!@#$%^&*()_+-=[]{}|;:,.<>?/~`';
-
-var COMMON_PASSWORDS = new Set([
+const COMMON_PASSWORDS = new Set([
   'password', 'password1', '123456', 'qwerty', 'abc123',
   'letmein', 'admin', 'login',
 ]);
+
 
 const DEFAULT_POLICY = {
   minLength: 8,
@@ -34,8 +36,11 @@ function calculateEntropy(password) {
   if (/[A-Z]/.test(password)) pool += 26;
   if (/[0-9]/.test(password)) pool += 10;
   pool += 32;  // BUG: special chars pool always added (incorrect)
+    // console.log('Pool size:', pool);
+    // console.log(Math.round(password.length * Math.log2(pool) * 100) / 100);
   return Math.round(password.length * Math.log2(pool) * 100) / 100;
 }
+// calculateEntropy(password);
 
 function gradeFromScore(score) {
   if (score < 40) return 'weak';

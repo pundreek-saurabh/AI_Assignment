@@ -33,10 +33,9 @@ const DEFAULT_POLICY = {
   blockCommon: true,
 };
 
-// Pre-compile the special-chars regex once to avoid repeated construction (CON-005)
-const SPECIAL_CHARS_REGEX = new RegExp(
-  '[' + SPECIAL_CHARS.replace(/[-\\^\]]/g, '\\$&') + ']'
-);
+// Pre-compiled literal regex for special characters (CON-005)
+// Covers: !@#$%^&*()_+-=[]{}|;':\",./<>?
+const SPECIAL_CHARS_REGEX = /[!@#$%^&*()_+\-=[\]{}|;':",./<>?]/;
 
 /**
  * Calculate Shannon entropy estimate (bits) for the given password.

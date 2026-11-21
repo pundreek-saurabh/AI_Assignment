@@ -1,0 +1,32 @@
+{
+  "target": "src/password-checker.js",
+  "runNumber": 5,
+  "checkedAt": "2026-11-21T12:14:12.122Z",
+  "completedAt": "2026-11-21T12:14:13.554Z",
+  "staticPassed": true,
+  "dynamicPassed": true,
+  "passed": true,
+  "gates": {
+    "lint": {
+      "gate": "lint",
+      "passed": true,
+      "findings": [],
+      "stderr": ""
+    },
+    "security": {
+      "gate": "security",
+      "passed": true,
+      "findings": [],
+      "stderr": ""
+    },
+    "tests": {
+      "gate": "tests",
+      "passed": true,
+      "exitCode": 0,
+      "stdout": "✔ AC-001: short password triggers MIN_LENGTH with correct required and actual (1.2947ms)\n✔ AC-002: fully compliant password has no violations and isAcceptable true (0.1719ms)\n✔ AC-003: all-lowercase password violates MISSING_UPPERCASE when required (0.135ms)\n✔ AC-004: all-uppercase password violates MISSING_LOWERCASE when required (0.125ms)\n✔ AC-005: password without digit violates MISSING_DIGIT when required (0.1881ms)\n✔ AC-006: password without special char violates MISSING_SPECIAL when required (0.1412ms)\n✔ AC-007: 10-char mixed-class password has entropy > 50 bits (0.116ms)\n✔ AC-008: score is always an integer in range [0, 100] (0.2125ms)\n✔ AC-009: short password with no variety gets grade \"weak\" (0.2259ms)\n✔ AC-010: medium-strength password gets grade \"fair\" (0.3641ms)\n✔ AC-011: Password1! (10 chars, all classes) gets grade \"strong\" (0.2026ms)\n✔ AC-012: very long mixed-class password gets grade \"very_strong\" (0.1492ms)\n✔ AC-013: any violation causes isAcceptable to be false (0.1856ms)\n✔ AC-014: zero violations means isAcceptable is true (0.1047ms)\n✔ AC-015: empty string gives EMPTY_PASSWORD, score 0, grade weak (0.0968ms)\n✔ AC-016: \"aaabbbccc\" with maxRepeatedChars:2 triggers REPEATED_CHARS (0.8534ms)\n✔ AC-017: \"password\" triggers COMMON_PASSWORD with default policy (0.126ms)\n✔ AC-018: MIN_LENGTH violation for \"Password1!\" against minLength:12 (0.1606ms)\n✔ AC-019: adding character classes to a password does not decrease score (0.1044ms)\n✔ AC-020: default policy does not trigger character-class violations (0.1275ms)\n✔ AC-021: requireSpecial false suppresses MISSING_SPECIAL violation (0.0693ms)\n✔ AC-022: entropy_bits is always a non-negative number (0.0959ms)\n✔ AC-023: violations is always an array, never null or undefined (0.0586ms)\n✔ AC-024: returned object has exactly the five required keys (0.596ms)\n✔ AC-025: 100-char password with all character classes scores 100 (0.0935ms)\nℹ tests 25\nℹ suites 0\nℹ pass 25\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 105.414\n",
+      "stderr": "",
+      "findings": []
+    }
+  },
+  "allFindings": []
+}

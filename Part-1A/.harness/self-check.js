@@ -45,13 +45,13 @@ console.log('\n=== Part 1A — Harness Self-Check ===\n');
 // ---------------------------------------------------------------------------
 console.log('Gate 1 Lint: bad input (uses var)');
 const lintBad = tmpFile("'use strict';\nvar x = 1;\nmodule.exports = x;\n", '.js');
-const r1bad = run('node', ['node_modules/.bin/eslint', lintBad, '--config', '.eslintrc.lint.json', '--max-warnings', '0'], ROOT);
+const r1bad = run('node', ['node_modules/eslint/bin/eslint.js', lintBad, '--config', '.eslintrc.lint.json', '--max-warnings', '0'], ROOT);
 check('Gate1-Lint-BAD', false, r1bad.code);
 fs.unlinkSync(lintBad);
 
 console.log('Gate 1 Lint: good input (uses const)');
 const lintGood = tmpFile("'use strict';\nconst x = 1;\nmodule.exports = x;\n", '.js');
-const r1good = run('node', ['node_modules/.bin/eslint', lintGood, '--config', '.eslintrc.lint.json', '--max-warnings', '0'], ROOT);
+const r1good = run('node', ['node_modules/eslint/bin/eslint.js', lintGood, '--config', '.eslintrc.lint.json', '--max-warnings', '0'], ROOT);
 check('Gate1-Lint-GOOD', true, r1good.code);
 fs.unlinkSync(lintGood);
 
@@ -60,13 +60,13 @@ fs.unlinkSync(lintGood);
 // ---------------------------------------------------------------------------
 console.log('\nGate 2 Security: bad input (uses eval)');
 const secBad = tmpFile("'use strict';\nconst f = (x) => eval(x);\nmodule.exports = f;\n", '.js');
-const r2bad = run('node', ['node_modules/.bin/eslint', secBad, '--config', '.eslintrc.security.json', '--max-warnings', '0'], ROOT);
+const r2bad = run('node', ['node_modules/eslint/bin/eslint.js', secBad, '--config', '.eslintrc.security.json', '--max-warnings', '0'], ROOT);
 check('Gate2-Security-BAD', false, r2bad.code);
 fs.unlinkSync(secBad);
 
 console.log('Gate 2 Security: good input (no eval, no object injection)');
 const secGood = tmpFile("'use strict';\nconst add = (a, b) => a + b;\nmodule.exports = add;\n", '.js');
-const r2good = run('node', ['node_modules/.bin/eslint', secGood, '--config', '.eslintrc.security.json', '--max-warnings', '0'], ROOT);
+const r2good = run('node', ['node_modules/eslint/bin/eslint.js', secGood, '--config', '.eslintrc.security.json', '--max-warnings', '0'], ROOT);
 check('Gate2-Security-GOOD', true, r2good.code);
 fs.unlinkSync(secGood);
 
